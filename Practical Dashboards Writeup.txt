@@ -1,0 +1,20 @@
+# What I learned from these three charts.
+
+# User Rating vs. Votes:
+The center of the "bell curve" for user ratings vs. votes seems to be about the 5-8 score range, which receives the most votes. Outside of this center, the vote count drops dramatically, with the top of the rating system (9) having a couple odd outliers and a much wider spread. This suggests that the majority of movies receive a score of 5-8, meaning the films meet average or above-average quality. Users also tend to only vote if they find the movie to meet these average to above-average expectations. Considering both wider spread and outliers for films at a 9 score, this indicates that films that do achieve this rating do so via near-unanimous agreement from users. Contrastingly - movies that perform below average (under a 5) receive very little votes, meaning that if a film performs poorly users are less likely to vote on them. Overall, the better the movie does the more votes it receives. 
+If it does overwhelmingly positively, it can reach the "highs" in terms of number of votes.
+
+#  Count of movies vs. Release Month
+
+The obvious winner is September, followed by January. My assumption for the large count of movies releasing in September would be due to publicity from film festivals (most notably, Venice International Film Festival and Toronto International Film Festival). Both of these film festivals take place in September, so releasing a movie during September prior to these film festivals is likely to acquire nominiations for additional publicity. If a film got a nomination, it could be used to market their movie -- "This movie got a nomination during its opening weekend... must be good!" 
+Looking at January and May, the next highest movie counts, these are less obvious to me. 
+January - release date aligns with winter holidays (somewhat), a time where people are more likely to want to be indoors to watch movies. 
+May - prior to Summer where many younger audiences have summer break. Movies released here could be targeting those younger audiences newly acquired free time for better returns.
+Overall - movies are generally released at points in time during the year where they can either receive additional exposure or targeting periods of time where people are more likely to have leisure time. Both have intent to looking for more audience / market share. 
+
+# Count of Movies vs. Release Year
+
+This is similar to the previous scatter plot but more generalized, making it easier to make a statement about the general trend. 
+Generally, the amount of movies increases as time goes on. The graph shows an obvious upwards trend, with the only major outlier being the year 2020. 
+Reasons for 2020 outlier: This is likely due to COVID lockdown. Numerous films were delayed during COVID due to production issues and movie theaters took time to implement COVID procedures into their movie theaters. As a result, movies were either delayed to later years for their theater runs or were released online. 
+If this graph showed more, I would expect to see the movie count reach 1500-1600+ movie count for the later years, if not more, to account for the low amount of releases in 2020.

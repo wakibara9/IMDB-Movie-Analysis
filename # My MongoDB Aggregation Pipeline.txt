@@ -1,0 +1,119 @@
+# My MongoDB Aggregation Pipeline
+
+```
+[
+    {
+        '$project': {
+            'id': '$id', 
+            'title': '$title', 
+            'runtime': {
+                '$convert': {
+                    'input': '$runtime', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'user_rating': {
+                '$convert': {
+                    'input': '$user_rating', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'votes': {
+                '$convert': {
+                    'input': '$votes', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'budget': {
+                '$convert': {
+                    'input': '$budget', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'opening_weekend': {
+                '$convert': {
+                    'input': '$opening_weekend', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'gross_sales': {
+                '$convert': {
+                    'input': '$gross_sales', 
+                    'to': 'int', 
+                    'onError': None
+                }
+            }, 
+            'genres_split': {
+                '$split': [
+                    {
+                        '$toString': '$genres'
+                    }, ', '
+                ]
+            }, 
+            'cast_split': {
+                '$split': [
+                    {
+                        '$toString': '$cast'
+                    }, ', '
+                ]
+            }, 
+            'director_split': {
+                '$split': [
+                    {
+                        '$toString': '$director'
+                    }, ', '
+                ]
+            }, 
+            'producer_split': {
+                '$split': [
+                    {
+                        '$toString': '$producer'
+                    }, ', '
+                ]
+            }, 
+            'company_split': {
+                '$split': [
+                    {
+                        '$toString': '$company'
+                    }, ', '
+                ]
+            }, 
+            'release_date': {
+                '$convert': {
+                    'input': '$release_date', 
+                    'to': 'date', 
+                    'onError': None
+                }
+            }, 
+            'mpaa_Array': {
+                '$map': {
+                    'input': {
+                        '$split': [
+                            '$mpaa_rating', '::'
+                        ]
+                    }, 
+                    'as': 'mpaa_split', 
+                    'in': {
+                        '$trim': {
+                            'input': '$$mpaa_split'
+                        }
+                    }
+                }
+            }
+        }
+    }, {
+        '$addFields': {
+            'first_mpaa_rating': {
+                '$arrayElemAt': [
+                    '$mpaa_Array', 0
+                ]
+            }
+        }
+    }
+]
+```
